@@ -1,0 +1,5 @@
+"18B20.obj",
+"delay.obj",
+"LCD.obj" 
+TO "LCD" 
+RAMSIZE(256) 

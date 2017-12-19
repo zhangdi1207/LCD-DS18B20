@@ -1,0 +1,19 @@
+C51 COMPILER V8.06   LCD                                                                   12/19/2017 13:49:02 PAGE 1   
+
+
+C51 COMPILER V8.06, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN LCD.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE LCD.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include"head.h"
+   2          
+   3          void lcdShow(int n)
+   4          {
+   5   1              bit signFlag=1;
+   6   1              uchar digit[2]
+   7   1      }
+*** ERROR C141 IN LINE 7 OF LCD.C: syntax error near '}'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)
