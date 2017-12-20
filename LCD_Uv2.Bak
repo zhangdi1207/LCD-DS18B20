@@ -8,6 +8,7 @@ Group (源代码组 1)
 File 1,1,<.\18B20.C><18B20.C> 0x0 
 File 1,1,<.\delay.c><delay.c> 0x0 
 File 1,1,<.\LCD.c><LCD.c> 0x0 
+File 1,1,<.\main.c><main.c> 0x0 
 
 
 Options 1,0,0  // Target '目标 1'
