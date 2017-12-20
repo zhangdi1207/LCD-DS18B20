@@ -1,5 +1,6 @@
 "18B20.obj",
 "delay.obj",
-"LCD.obj" 
+"LCD.obj",
+"main.obj" 
 TO "LCD" 
 RAMSIZE(256) 

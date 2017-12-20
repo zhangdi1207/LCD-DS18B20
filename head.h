@@ -10,6 +10,9 @@
 
 sfr CLK_DIV = 0x97;					// ±÷”√¸¡Óºƒ¥Ê∆˜
 sfr WDT_CONTR = 0xc1;//ø¥√≈π∑
+sfr P3M1=0xb1;
+sfr P3M0=0xb2;
+sfr P5=0xc8;
 
 sbit SEG10=P1^0;
 sbit SEG9=P1^1;
@@ -17,11 +20,8 @@ sbit SEG8=P1^2;
 sbit SEG7=P1^3;
 sbit SEG6=P1^4;
 sbit SEG5=P1^5;
-sbit COM1=P3^0;
-sbit COM2=P3^1;
-sbit COM3=P3^2;
-sbit COM4=P3^3;
-sbit DQ=P3^6;
+
+sbit DQ=P5^5;
 
 
 void lcdShow(int n);
@@ -29,6 +29,6 @@ void lcdShow(int n);
 void DelayXus(uint n);
 void DelayNms(uint n);
 
-int readOneTemp(void);
+int readOneTemp();
 
 #endif
