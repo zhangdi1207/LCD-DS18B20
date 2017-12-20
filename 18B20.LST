@@ -1,9 +1,9 @@
-C51 COMPILER V8.06   18B20                                                                 12/20/2017 13:49:27 PAGE 1   
+C51 COMPILER V8.06   18B20                                                                 12/20/2017 21:07:36 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE 18B20
 OBJECT MODULE PLACED IN 18B20.OBJ
-COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 18B20.C BROWSE DEBUG OBJECTEXTEND
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE 18B20.C OPTIMIZE(9,SIZE) BROWSE DEBUG OBJECTEXTEND
 
 line level    source
 
@@ -62,7 +62,7 @@ line level    source
   53   2                      j=dat&0x01;
   54   2                      dat>>=1;
   55   2              DQ = 0;                     //开始时间片
-C51 COMPILER V8.06   18B20                                                                 12/20/2017 13:49:27 PAGE 2   
+C51 COMPILER V8.06   18B20                                                                 12/20/2017 21:07:36 PAGE 2   
 
   56   2              nop();                //延时等待
   57   2              DQ = j;

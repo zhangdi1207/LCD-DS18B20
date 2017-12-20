@@ -1,9 +1,9 @@
-C51 COMPILER V8.06   LCD                                                                   12/20/2017 13:49:27 PAGE 1   
+C51 COMPILER V8.06   LCD                                                                   12/20/2017 21:07:36 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE LCD
 OBJECT MODULE PLACED IN LCD.OBJ
-COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE LCD.c BROWSE DEBUG OBJECTEXTEND
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE LCD.c OPTIMIZE(9,SIZE) BROWSE DEBUG OBJECTEXTEND
 
 line level    source
 
@@ -62,7 +62,7 @@ line level    source
   53   3                              P3M1=highSet[i];
   54   3                              P3M0=lowSet[i];
   55   3                              P3=~(0x01<<i);
-C51 COMPILER V8.06   LCD                                                                   12/20/2017 13:49:27 PAGE 2   
+C51 COMPILER V8.06   LCD                                                                   12/20/2017 21:07:36 PAGE 2   
 
   56   3                              DelayNms(2);
   57   3                              P3=~P3;
@@ -76,7 +76,7 @@ line level    source
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    374    ----
+   CODE SIZE        =    360    ----
    CONSTANT SIZE    =     24    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
