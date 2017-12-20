@@ -1,4 +1,4 @@
-C51 COMPILER V8.06   LCD                                                                   12/20/2017 08:44:43 PAGE 1   
+C51 COMPILER V8.06   LCD                                                                   12/20/2017 13:33:54 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE LCD
@@ -19,7 +19,7 @@ line level    source
   10   1              uchar units,tens;
   11   1              if(n<0)
   12   1              {
-  13   2                      seg[2]=0x80;
+  13   2                      seg[2]=0x40;
   14   2                      signFlag=0;
   15   2                      n=-n;
   16   2              }
@@ -62,7 +62,7 @@ line level    source
   53   3                              P3M1=highSet[i];
   54   3                              P3M0=lowSet[i];
   55   3                              P3=~(0x01<<i);
-C51 COMPILER V8.06   LCD                                                                   12/20/2017 08:44:43 PAGE 2   
+C51 COMPILER V8.06   LCD                                                                   12/20/2017 13:33:54 PAGE 2   
 
   56   3                              DelayNms(2);
   57   3                              P3=~P3;

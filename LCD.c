@@ -10,7 +10,7 @@ void calSEG(int n)
 	uchar units,tens;
 	if(n<0)
 	{
-		seg[2]=0x80;
+		seg[2]=0x40;
 		signFlag=0;
 		n=-n;
 	}
