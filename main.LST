@@ -1,4 +1,4 @@
-C51 COMPILER V8.06   MAIN                                                                  12/20/2017 21:07:36 PAGE 1   
+C51 COMPILER V8.06   MAIN                                                                  12/24/2017 16:46:38 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE MAIN
@@ -9,27 +9,36 @@ line level    source
 
    1          #include"head.h"
    2          
-   3          code uchar a[8]={1,2,3,4,5,6,7,8};
+   3          uchar a[8]={1,2,3,4,5,6,7,8};
    4          
    5          void main()
    6          {
-   7   1              while(1)
-   8   1              {
-   9   2                      lcdShow(readOneTemp());
-  10   2                      //lcdShow(2);
-  11   2              }
-  12   1      }
+   7   1              uchar i,j;
+   8   1              while(1)
+   9   1              {
+  10   2                      lcdShow(readOneTemp());
+  11   2                      /*
+  12   2                      for(i=0;i<50;i++)
+  13   2                              for(j=0;j<10;j++)
+  14   2                              {
+  15   2                                      lcdShow(i);
+  16   2                              }
+  17   2                              //*/
+  18   2              }
+  19   1      }
+*** WARNING C280 IN LINE 7 OF MAIN.C: 'i': unreferenced local variable
+*** WARNING C280 IN LINE 7 OF MAIN.C: 'j': unreferenced local variable
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
    CODE SIZE        =      8    ----
-   CONSTANT SIZE    =      8    ----
+   CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =   ----    ----
+   DATA SIZE        =      8       2
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
 
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+C51 COMPILATION COMPLETE.  2 WARNING(S),  0 ERROR(S)

@@ -1,4 +1,4 @@
-C51 COMPILER V8.06   LCD                                                                   12/20/2017 21:07:36 PAGE 1   
+C51 COMPILER V8.06   LCD                                                                   12/24/2017 16:46:38 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE LCD
@@ -9,80 +9,114 @@ line level    source
 
    1          #include"head.h"
    2          
-   3          uchar seg[4]={0x0a,0,0,0};
+   3          uchar seg[4]={0,0,0,0x0a};
    4          
    5          void calSEG(int n)
    6          {
-   7   1              bit signFlag=1;
-   8   1              uchar digit[2];
-   9   1              uchar lcdCode[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71};
+   7   1              uchar digit[2];
+   8   1              uchar i;
+   9   1              uchar lcdCode[]={0x77,0x14,0x5b,0x5d,0x3c,0x6d,0x6f,0x54,0x7f,0x7d};
   10   1              uchar units,tens;
-  11   1              if(n<0)
+  11   1              for(i=0;i<4;i++)
   12   1              {
-  13   2                      seg[2]=0x40;
-  14   2                      signFlag=0;
-  15   2                      n=-n;
-  16   2              }
-  17   1              if(n>99)
-  18   1              {
-  19   2                      seg[0]=0x2a;
-  20   2                      seg[2]=0x0;
-  21   2                      seg[3]=0x0;
-  22   2                      seg[4]=0x0;
-  23   2              }
-  24   1              else
-  25   1              {
-  26   2                      digit[0]=n%10;
-  27   2                      digit[1]=(n/10)%10;
-  28   2                      tens=lcdCode[digit[1]];
-  29   2                      units=lcdCode[digit[0]];
-  30   2                      seg[0]|=(tens&0x01)<<2                                          |       (units&0x01);
-  31   2                      seg[1]|=((tens&0x40)>>3 |       (tens&0x02)<<1) |       ((units&0x40)>>5        |       (units&0x02)>>1);
-  32   2                      seg[2]|=((tens&0x20)>>2 |       (tens&0x04))    |       ((units&0x20)>>4        |       (units&0x04)>>2);
-  33   2                      seg[3]|=((tens&0x10)>>1 |       (tens&0x08)>>1) |       ((units&0x10)>>3        |       (units&0x08)>>3);
-  34   2              }
-  35   1      }
-  36          
-  37          
-  38          
-  39          void lcdShow(int n)
-  40          {
-  41   1              uchar i,j;
-  42   1              uchar highSet[4]={0x0e,0x0d,0x0b,0x07};
-  43   1              uchar lowSet[4]={0x01,0x02,0x04,0x08};
-  44   1              j=10;
-  45   1              calSEG(n);
-  46   1              while(j--)
-  47   1              {
-  48   2                      for(i=0;i<4;i++)
-  49   2                      {
-  50   3                              P3M1=0x0f;
-  51   3                              P3M0=0x00;
-  52   3                              P1=seg[i];
-  53   3                              P3M1=highSet[i];
-  54   3                              P3M0=lowSet[i];
-  55   3                              P3=~(0x01<<i);
-C51 COMPILER V8.06   LCD                                                                   12/20/2017 21:07:36 PAGE 2   
+  13   2                      seg[i]=0;
+  14   2              }
+  15   1              seg[3]=0x0a;
+  16   1              if(n<0)
+  17   1              {
+  18   2                      seg[1]=0x20;
+  19   2                      n=-n;
+  20   2              }
+  21   1              if(n>99)
+  22   1              {
+  23   2                      seg[0]=0x0;
+  24   2                      seg[1]=0x0;
+  25   2                      seg[2]=0x0;
+  26   2                      seg[3]=0x2a;
+  27   2              }
+  28   1              else
+  29   1              {
+  30   2                      digit[0]=n%10;
+  31   2                      digit[1]=(n/10)%10;
+  32   2                      tens=lcdCode[digit[1]];
+  33   2                      units=lcdCode[digit[0]];
+  34   2                      seg[0]|=(tens&0x03)<<2  |       (units&0x03);
+  35   2                      seg[1]|=(tens&0x0c)             |       (units&0x0c)>>2;
+  36   2                      seg[2]|=(tens&0x30)>>2  |       (units&0x30)>>4;
+  37   2                      seg[3]|=(tens&0xc0)>>4  |       (units&0xc0)>>6;
+  38   2              }
+  39   1      }
+  40          
+  41          
+  42          //*
+  43          void lcdShow(int n)
+  44          {
+  45   1              uchar i,j;
+  46   1              uchar highSet[4]={0x0e,0x0d,0x0b,0x07};
+  47   1              uchar lowSet[4]={0x01,0x02,0x04,0x08};
+  48   1              j=10;
+  49   1              calSEG(n);
+  50   1              while(j--)
+  51   1              {
+  52   2                      for(i=0;i<4;i++)
+  53   2                      {
+  54   3                              P3M1=0x0f;
+  55   3                              P3M0=0x00;
+C51 COMPILER V8.06   LCD                                                                   12/24/2017 16:46:38 PAGE 2   
 
-  56   3                              DelayNms(2);
-  57   3                              P3=~P3;
-  58   3                              P1=~P1;
-  59   3                              DelayNms(2);
-  60   3                      }       
-  61   2              }
-  62   1      
-  63   1              
-  64   1      }
+  56   3                              P1=seg[i];
+  57   3                              P3M1=highSet[i];
+  58   3                              P3M0=lowSet[i];
+  59   3                              P3=~(0x01<<i);
+  60   3                              DelayNms(2);
+  61   3                              P3=~P3;
+  62   3                              P1=~P1;
+  63   3                              DelayNms(2);
+  64   3                      }       
+  65   2              }
+  66   1      
+  67   1              
+  68   1      }
+  69          //*/
+  70          /*
+  71          void lcdShow(int n)
+  72          {
+  73                  uchar i,j;
+  74                  uchar highSet[4]={0x0e,0x0d,0x0b,0x07};
+  75                  uchar lowSet[4]={0x01,0x02,0x04,0x08};
+  76                  j=10;
+  77                  seg[0]=0x04;
+  78                  seg[1]=0x0d;
+  79                  seg[2]=0x09;
+  80                  seg[3]=0x24;
+  81                  
+  82                  while(j--)
+  83                  {
+  84                          for(i=0;i<4;i++)
+  85                          {
+  86                                  P1=seg[i];
+  87                                  P3M1=highSet[i];
+  88                                  P3M0=lowSet[i];
+  89                                  P3=~(0x01<<i);
+  90                                  DelayNms(2);
+  91                                  P3=~P3;
+  92                                  P1=~P1;
+  93                                  DelayNms(2);
+  94                          }
+  95                  }
+  96          
+  97          }
+  98          //*/
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    360    ----
-   CONSTANT SIZE    =     24    ----
+   CODE SIZE        =    319    ----
+   CONSTANT SIZE    =     18    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      4      32
+   DATA SIZE        =      4      26
    IDATA SIZE       =   ----    ----
-   BIT SIZE         =   ----       1
+   BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
 
