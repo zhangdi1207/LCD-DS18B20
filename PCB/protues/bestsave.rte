@@ -58,114 +58,113 @@
    (shape (circ BOT 127000 0 0))
   )
   (padstack $VIA_SIGNAL
-   (shape (circ TOP 76200 0 0))
-   (shape (circ I1 76200 0 0))
-   (shape (circ I2 76200 0 0))
-   (shape (circ I3 76200 0 0))
-   (shape (circ I4 76200 0 0))
-   (shape (circ I5 76200 0 0))
-   (shape (circ I6 76200 0 0))
-   (shape (circ I7 76200 0 0))
-   (shape (circ I8 76200 0 0))
-   (shape (circ I9 76200 0 0))
-   (shape (circ I10 76200 0 0))
-   (shape (circ I11 76200 0 0))
-   (shape (circ I12 76200 0 0))
-   (shape (circ I13 76200 0 0))
-   (shape (circ I14 76200 0 0))
-   (shape (circ BOT 76200 0 0))
+   (shape (circ TOP 127000 0 0))
+   (shape (circ I1 127000 0 0))
+   (shape (circ I2 127000 0 0))
+   (shape (circ I3 127000 0 0))
+   (shape (circ I4 127000 0 0))
+   (shape (circ I5 127000 0 0))
+   (shape (circ I6 127000 0 0))
+   (shape (circ I7 127000 0 0))
+   (shape (circ I8 127000 0 0))
+   (shape (circ I9 127000 0 0))
+   (shape (circ I10 127000 0 0))
+   (shape (circ I11 127000 0 0))
+   (shape (circ I12 127000 0 0))
+   (shape (circ I13 127000 0 0))
+   (shape (circ I14 127000 0 0))
+   (shape (circ BOT 127000 0 0))
   )
   )
   (network_out
    (Net #00000 
    (rule
    )
-   (wire (path BOT 50800  1450000 -924000 1450000 -900000 1050000 -900000)
+   (wire (path BOT 76200  1450000 -924000 1450000 -900000 1050000 -900000)
     (connect (terminal pin MCU1-6) (terminal pin U2-1))
    )
    )
    (Net #00003 
    (rule
    )
-   (wire (path BOT 50800  1450000 600000 1450000 762000 3550000 762000
-     3550000 1500000)
+   (wire (path BOT 76200  1450000 600000 1270000 600000 1270000 219000
+     1778000 219000 1778000 142799 1905000 142799 1905000 254000
+     2032000 254000 2032000 762000 3550000 762000 3550000 1500000)
     (connect (terminal pin MCU1-0) (terminal pin LCD1-6))
    )
    )
    (Net #00004 
    (rule
    )
-   (wire (path BOT 50800  1450000 346000 1596050 346000 1596050 -35000
-     1319050 -35000 1319050 -289000 1778000 -289000 1778000 -254000
-     2032000 -254000 2032000 473000 2540000 473000 2540000 508000
-     4064000 508000 4064000 1676670 3350000 1676670 3350000 1500000)
-    (connect (terminal pin MCU1-1) (terminal pin LCD1-7))
+   (wire (path BOT 76200  3350000 1500000 3350000 1016000 1778000 1016000
+     1778000 346000 1450000 346000)
+    (connect (terminal pin LCD1-7) (terminal pin MCU1-1))
    )
    )
    (Net #00005 
    (rule
    )
-   (wire (path BOT 50800  1450000 92000 1206500 508000 1206500 1270000
-     1714500 1270000 2973330 1676670 3150000 1500000)
+   (wire (path BOT 76200  1450000 92000 1165950 92000 1165950 762000
+     1524000 762000 1524000 1270000 3150000 1270000 3150000 1500000)
     (connect (terminal pin MCU1-2) (terminal pin LCD1-8))
-    (type protect)
    )
    )
    (Net #00006 
    (rule
    )
-   (wire (path BOT 50800  1450000 -162000 1704000 -162000 1704000 473000
-     1333500 473000 1333500 1016000 2667000 1079500 2950000 1500000)
-    (connect (terminal pin MCU1-3) (terminal pin LCD1-9))
-    (type protect)
+   (wire (path BOT 76200  2950000 1500000 -254000 1500000 -254000 -1524000
+     1778000 -1524000 1778000 -162000 1450000 -162000)
+    (connect (terminal pin LCD1-9) (terminal pin MCU1-3))
    )
    )
    (Net #00008 
    (rule
    )
-   (wire (path BOT 50800  2212000 600000 3750000 600000 3750000 1500000)
+   (wire (path BOT 76200  2212000 600000 3750000 600000 3750000 1500000)
     (connect (terminal pin MCU1-15) (terminal pin LCD1-5))
    )
    )
    (Net #00009 
    (rule
    )
-   (wire (path BOT 50800  2212000 346000 2950000 346000 2950000 100000)
-    (connect (terminal pin MCU1-14) (terminal pin LCD1-4))
+   (wire (path BOT 76200  2950000 100000 2950000 346000 2212000 346000)
+    (connect (terminal pin LCD1-4) (terminal pin MCU1-14))
    )
    )
    (Net #00012 
    (rule
    )
-   (wire (path BOT 50800  2212000 -416000 2381150 -416000 2540000 -257150
-     2792850 -257150 3150000 100000)
-    (connect (terminal pin MCU1-11) (terminal pin LCD1-3))
+   (wire (path BOT 76200  3150000 -400000 3048000 -400000 3048000 -143650
+     2365675 -143650 2365675 -416000 2212000 -416000)
+    (connect (terminal wire) (terminal pin MCU1-11))
    )
-   (wire (path BOT 50800  3150000 100000 3150000 -102000 3448000 -400000
-     3666000 -400000)
-    (connect (terminal pin LCD1-3) (terminal pin R4-1))
+   (wire (path BOT 76200  3150000 -400000 3666000 -400000)
+    (connect (terminal wire) (terminal pin R4-1))
+   )
+   (wire (path BOT 76200  3150000 100000 3150000 -400000)
+    (connect (terminal pin LCD1-3) (terminal wire))
    )
    )
    (Net #00013 
    (rule
    )
-   (wire (path BOT 50800  2212000 -670000 1778000 -670000 1778000 -1603374
-     4318000 -1603374 4318000 254000 3350000 254000 3350000 100000)
+   (wire (path BOT 76200  2212000 -670000 1905000 -670000 1905000 -1669620
+     -359620 -1669620 -359620 1676670 4064000 1676670 4064000 427000
+     3350000 427000 3350000 100000)
     (connect (terminal pin MCU1-10) (terminal pin LCD1-2))
    )
-   (wire (path BOT 50800  2212000 -670000 2212000 -695400 2650000 -695400
-     2650000 -700000)
+   (wire (path BOT 76200  2212000 -670000 2212000 -700000 2650000 -700000)
     (connect (terminal pin MCU1-10) (terminal pin R3-0))
    )
    )
    (Net #00014 
    (rule
    )
-   (wire (path BOT 50800  2650000 -1000000 3048000 -1000000 3048000 -550000
-     3810000 -550000 3810000 -254000 3550000 -254000 3550000 100000)
-    (connect (terminal pin R2-0) (terminal pin LCD1-1))
+   (wire (path BOT 76200  2212000 -924000 2032000 -924000 2032000 -1669620
+     4064000 -1669620 4064000 254000 3550000 254000 3550000 100000)
+    (connect (terminal pin MCU1-9) (terminal pin LCD1-1))
    )
-   (wire (path BOT 50800  2212000 -924000 2212000 -949400 2650000 -949400
+   (wire (path BOT 76200  2212000 -924000 2418300 -924000 2418300 -1000000
      2650000 -1000000)
     (connect (terminal pin MCU1-9) (terminal pin R2-0))
    )
@@ -173,59 +172,58 @@
    (Net #00015 
    (rule
    )
-   (wire (path BOT 50800  2650000 -1300000 3302000 -1300000 3302000 -1524000
-     4064000 -1524000 4064000 100000 3750000 100000)
-    (connect (terminal pin R1-0) (terminal pin LCD1-0))
+   (wire (path BOT 76200  3750000 100000 3926050 100000 3926050 -1524000
+     2650000 -1524000 2650000 -1300000)
+    (connect (terminal pin LCD1-0) (terminal pin R1-0))
    )
-   (wire (path BOT 50800  2212000 -1178000 2212000 -1300000 2650000 -1300000)
+   (wire (path BOT 76200  2212000 -1178000 2212000 -1216100 2650000 -1216100
+     2650000 -1300000)
     (connect (terminal pin MCU1-8) (terminal pin R1-0))
    )
    )
    (Net #00016 
    (rule
    )
-   (wire (path BOT 50800  3666000 -1000000 3302000 -1000000 3302000 -1150000
-     2418300 -1150000 2418300 -1051000 2032000 -1051000 2032000 -797000
-     2418300 -797000 2418300 -850000 2794000 -850000 2794000 -400000
+   (wire (path BOT 76200  2650000 -400000 2874400 -400000 2874400 -508000
+     3048000 -508000 3048000 -700000 3666000 -700000)
+    (connect (terminal pin R4-0) (terminal pin R3-1))
+   )
+   (wire (path BOT 76200  1150000 -200000 1319050 -200000 1319050 -35000
+     2032000 -35000 2032000 -543000 2482437 -543000 2482437 -400000
      2650000 -400000)
-    (connect (terminal pin R2-1) (terminal pin R4-0))
+    (connect (terminal pin C1-0) (terminal pin R4-0))
    )
-   (wire (path BOT 50800  2650000 -400000 2650000 -547700 1270000 -547700
-     1270000 -508000 1150000 -508000 1150000 -200000)
-    (connect (terminal pin R4-0) (terminal pin C1-0))
+   (wire (path BOT 76200  3666000 -1300000 3666000 -1000000)
+    (connect (terminal pin R1-1) (terminal pin R2-1))
    )
-   (wire (path BOT 50800  3666000 -1000000 3666000 -700000)
-    (connect (terminal pin R2-1) (terminal pin R3-1))
-   )
-   (wire (path BOT 50800  3666000 -1000000 3666000 -1300000)
-    (connect (terminal pin R2-1) (terminal pin R1-1))
+   (wire (path BOT 76200  3666000 -700000 3666000 -1000000)
+    (connect (terminal pin R3-1) (terminal pin R2-1))
    )
    )
    (Net GND 
    (rule
    )
-   (wire (path BOT 63499  1050000 -1103200 896000 -1103200 896000 -200000)
-    (connect (terminal pin U2-0) (terminal pin C1-1))
+   (wire (path BOT 76200  1450000 -1178000 1626700 -1178000 1626700 -543000
+     1270000 -543000 1270000 -508000 896000 -508000 896000 -200000)
+    (connect (terminal pin MCU1-7) (terminal pin C1-1))
    )
-   (wire (path BOT 63499  896000 -200000 650000 -200000 650000 320000)
+   (wire (path BOT 76200  896000 -200000 650000 -200000 650000 320000)
     (connect (terminal pin C1-1) (terminal pin DC1-0))
    )
-   (wire (path BOT 63499  1450000 -1178000 1450000 -1051000 1270000 -1051000
-     1270000 -1103200 1050000 -1103200)
+   (wire (path BOT 76200  1450000 -1178000 1270000 -1178000 1270000 -1103200
+     1050000 -1103200)
     (connect (terminal pin MCU1-7) (terminal pin U2-0))
    )
    )
    (Net VCC/VDD 
    (rule
    )
-   (wire (path BOT 63499  1450000 -670000 1450000 -696800 1050000 -696800)
-    (connect (terminal pin MCU1-5) (terminal pin U2-2))
+   (wire (path BOT 76200  1050000 -696800 0 -696800 0 1270000
+     900000 1270000 900000 800000)
+    (connect (terminal pin U2-2) (terminal pin DC1-2))
    )
-   (wire (path BOT 63499  900000 800000 600000 800000 600000 1300000
-     0 1300000 0 -1100000 400000 -1200000 1379050 -1524000
-     1633050 -1270000 1633050 -853050 1450000 -670000)
-    (connect (terminal pin DC1-2) (terminal pin MCU1-5))
-    (type protect)
+   (wire (path BOT 76200  1050000 -696800 1050000 -670000 1450000 -670000)
+    (connect (terminal pin U2-2) (terminal pin MCU1-5))
    )
    )
   )

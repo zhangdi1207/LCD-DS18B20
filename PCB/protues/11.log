@@ -1,4 +1,4 @@
-# Writing all output to: G:\git\SCM-LCD-DS18B20\PCD\protues\11.log
+# Writing all output to: G:\git\SCM-LCD-DS18B20\PCB\protues\11.log
 set pad_wire_necking on
 bus diagonal
 fanout 5
