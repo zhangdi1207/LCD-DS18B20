@@ -1,11 +1,15 @@
 #include"head.h"
 
 uchar seg[4]={0,0,0,0x0a};
+/*////////////////
+注意以下方法适用于P1.0接SEG1(接口5），P1.5接SEG6（接口10），如果反过来，那么calSEG函数中最后的位颠倒运算可以取消
+*//////////////
+
 
 void calSEG(int n)
 {
 	uchar digit[2];
-	uchar i;
+	uchar i,j,old,new;
 	uchar lcdCode[]={0x77,0x14,0x5b,0x5d,0x3c,0x6d,0x6f,0x54,0x7f,0x7d};
 	uchar units,tens;
 	for(i=0;i<4;i++)
@@ -35,6 +39,19 @@ void calSEG(int n)
 		seg[1]|=(tens&0x0c)		|	(units&0x0c)>>2;
 		seg[2]|=(tens&0x30)>>2	|	(units&0x30)>>4;
 		seg[3]|=(tens&0xc0)>>4	|	(units&0xc0)>>6;
+	}
+	//*/取反操作，适用于P1.0接SEG1(接口5），P1.5接SEG6（接口10），如果反过来，那么位颠倒运算可以取消
+	for(i=0;i<4;i++)
+	{
+		old = seg[i];
+		new=0;
+		for(j=0;j<6;j++)
+		{
+			new<<=1;
+			if((old&0x01)==0x01)
+				new |= 0x01;
+			old >>=1;
+		}
 	}
 }
 

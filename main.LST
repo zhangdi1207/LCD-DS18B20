@@ -1,9 +1,9 @@
-C51 COMPILER V8.06   MAIN                                                                  12/24/2017 16:46:38 PAGE 1   
+C51 COMPILER V8.06   MAIN                                                                  01/17/2018 09:09:21 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE MAIN
 OBJECT MODULE PLACED IN main.OBJ
-COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE main.c OPTIMIZE(9,SIZE) BROWSE DEBUG OBJECTEXTEND
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c OPTIMIZE(9,SIZE) BROWSE DEBUG OBJECTEXTEND
 
 line level    source
 
@@ -13,7 +13,7 @@ line level    source
    4          
    5          void main()
    6          {
-   7   1              uchar i,j;
+   7   1              //uchar i,j;
    8   1              while(1)
    9   1              {
   10   2                      lcdShow(readOneTemp());
@@ -26,8 +26,6 @@ line level    source
   17   2                              //*/
   18   2              }
   19   1      }
-*** WARNING C280 IN LINE 7 OF MAIN.C: 'i': unreferenced local variable
-*** WARNING C280 IN LINE 7 OF MAIN.C: 'j': unreferenced local variable
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
@@ -35,10 +33,10 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      8       2
+   DATA SIZE        =      8    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
 
-C51 COMPILATION COMPLETE.  2 WARNING(S),  0 ERROR(S)
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
