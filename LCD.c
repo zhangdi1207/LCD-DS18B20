@@ -52,6 +52,7 @@ void calSEG(int n)
 				new |= 0x01;
 			old >>=1;
 		}
+		seg[i]=new;
 	}
 }
 

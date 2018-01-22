@@ -1,4 +1,4 @@
-C51 COMPILER V8.06   DELAY                                                                 01/17/2018 09:09:21 PAGE 1   
+C51 COMPILER V8.06   DELAY                                                                 01/22/2018 12:10:05 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE DELAY
@@ -62,7 +62,7 @@ line level    source
   53                          while(n--);
   54                  }
   55                  else
-C51 COMPILER V8.06   DELAY                                                                 01/17/2018 09:09:21 PAGE 2   
+C51 COMPILER V8.06   DELAY                                                                 01/22/2018 12:10:05 PAGE 2   
 
   56                  {
   57                  n-=10;
