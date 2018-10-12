@@ -1,0 +1,20 @@
+Added Component: Designator=D?(3216[1206])
+Added Component: Designator=Q11(SOT23)
+Added Component: Designator=R11(3225[1210])
+Added Component: Designator=R12(AXIAL-0.4)
+Added Pin To Net: NetName=Net408AS_8 Pin=D?-2
+Added Pin To Net: NetName=Net408AS_6 Pin=Q11-2
+Added Pin To Net: NetName=Net408AS_6 Pin=R11-2
+Added Pin To Net: NetName=Net408AS_8 Pin=R12-1
+Added Pin To Net: NetName=NetD?_1 Pin=D?-1
+Added Pin To Net: NetName=NetD?_1 Pin=Q11-1
+Added Net: Name=NetD?_1
+Added Pin To Net: NetName=NetQ11_3 Pin=Q11-3
+Added Pin To Net: NetName=NetQ11_3 Pin=R11-1
+Added Pin To Net: NetName=NetQ11_3 Pin=R12-2
+Added Net: Name=NetQ11_3
+Added Member To Class: ClassName=Sheet1 Member=Component D? LED3
+Added Member To Class: ClassName=Sheet1 Member=Component Q11 2N7002
+Added Member To Class: ClassName=Sheet1 Member=Component R11 Res3
+Added Member To Class: ClassName=Sheet1 Member=Component R12 Res2
+Added Room: Name=Sheet1

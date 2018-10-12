@@ -1,0 +1,15 @@
+Added Component: Designator=BT(PCBComponent_1)
+Added Pin To Net: NetName=NetBT_3 Pin=BT-1
+Added Pin To Net: NetName=NetLCD_1 Pin=BT-3
+Change Net Name : Old Net Name=NetBT_1 New Net Name=Net408AS_3
+Change Net Name : Old Net Name=NetBT_3 New Net Name=Net408AS_6
+Change Net Name : Old Net Name=NetDS18B20_1 New Net Name=Net408AS_7
+Change Net Name : Old Net Name=NetLCD_1 New Net Name=Net408AS_8
+Change Net Name : Old Net Name=NetLCD_2 New Net Name=Net408AS_9
+Change Net Name : Old Net Name=NetLCD_3 New Net Name=Net408AS_10
+Change Net Name : Old Net Name=NetLCD_4 New Net Name=Net408AS_11
+Change Net Name : Old Net Name=NetLCD_6 New Net Name=Net408AS_12
+Change Net Name : Old Net Name=NetLCD_9 New Net Name=Net408AS_15
+Change Net Name : Old Net Name=NetLCD_10 New Net Name=Net408AS_16
+Change Net Name : Old Net Name=NetR1_2 New Net Name=NetCAP_1
+Added Member To Class: ClassName=Sheet1 Member=Component BT HEADER 3

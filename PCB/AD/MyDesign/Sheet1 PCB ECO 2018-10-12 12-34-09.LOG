@@ -1,0 +1,13 @@
+Added Component: Designator=LCD(MYLCD)
+Added Pin To Net: NetName=Net408AS_9 Pin=LCD-1
+Added Pin To Net: NetName=Net408AS_10 Pin=LCD-2
+Added Pin To Net: NetName=Net408AS_11 Pin=LCD-3
+Added Pin To Net: NetName=Net408AS_12 Pin=LCD-4
+Added Pin To Net: NetName=Net408AS_4 Pin=LCD-5
+Added Pin To Net: NetName=Net408AS_3 Pin=LCD-6
+Added Pin To Net: NetName=Net408AS_2 Pin=LCD-7
+Added Pin To Net: NetName=Net408AS_1 Pin=LCD-8
+Added Pin To Net: NetName=Net408AS_16 Pin=LCD-9
+Added Pin To Net: NetName=Net408AS_15 Pin=LCD-10
+Added Member To Class: ClassName=Sheet1 Member=Component LCD 3-7SEG-LCD
+Added Room: Name=Sheet1

@@ -1,0 +1,20 @@
+Added Component: Designator=408AS(DIP16)
+Added Component: Designator=BT(PCBComponent_1)
+Added Pin To Net: NetName=Net408AS_1 Pin=408AS-1
+Added Pin To Net: NetName=Net408AS_2 Pin=408AS-2
+Added Pin To Net: NetName=Net408AS_3 Pin=408AS-3
+Added Pin To Net: NetName=Net408AS_4 Pin=408AS-4
+Added Pin To Net: NetName=Net408AS_6 Pin=408AS-6
+Added Pin To Net: NetName=Net408AS_7 Pin=408AS-7
+Added Pin To Net: NetName=Net408AS_8 Pin=408AS-8
+Added Pin To Net: NetName=Net408AS_9 Pin=408AS-9
+Added Pin To Net: NetName=Net408AS_10 Pin=408AS-10
+Added Pin To Net: NetName=Net408AS_11 Pin=408AS-11
+Added Pin To Net: NetName=Net408AS_12 Pin=408AS-12
+Added Pin To Net: NetName=Net408AS_15 Pin=408AS-15
+Added Pin To Net: NetName=Net408AS_16 Pin=408AS-16
+Added Pin To Net: NetName=Net408AS_6 Pin=BT-1
+Added Pin To Net: NetName=Net408AS_6 Pin=BT-2
+Added Pin To Net: NetName=Net408AS_8 Pin=BT-3
+Added Member To Class: ClassName=Sheet1 Member=Component 408AS STC15W408AS
+Added Member To Class: ClassName=Sheet1 Member=Component BT HEADER 3

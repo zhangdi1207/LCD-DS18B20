@@ -1,0 +1,103 @@
+Protel Synchronization report
+=========================================================================
+Date : 11-Jan-2018
+Time : 15:36:29
+
+Reference document: Sheet1.Sch
+Target document:    Sheet1.Pcb
+=========================================================================
+
+ERRORS: 21 macros can not be executed:
+-------------------------------------------------------------------------
+Macro 1: New Component
+Add new component BT
+Error: Footprint DC005 not found in library
+
+Macro 2: New Component
+Add new component CAP
+Error: Footprint RB.1/.2 not found in library
+
+Macro 3: New Component
+Add new component DS18B20
+Error: Footprint TO92A not found in library
+
+Macro 4: New Component
+Add new component LCD
+Error: Footprint LCD not found in library
+
+Macro 5: New Node
+Add node CAP-1 to net NetR1_2
+Error: Component not found
+
+Macro 6: New Node
+Add node LCD-1 to net NetLCD_1
+Error: Component not found
+
+Macro 7: New Node
+Add node LCD-2 to net NetLCD_2
+Error: Component not found
+
+Macro 8: New Node
+Add node LCD-3 to net NetLCD_3
+Error: Component not found
+
+Macro 9: New Node
+Add node LCD-4 to net NetLCD_4
+Error: Component not found
+
+Macro 10: New Node
+Add node DS18B20-1 to net NetDS18B20_1
+Error: Component not found
+
+Macro 11: New Node
+Add node LCD-6 to net NetLCD_6
+Error: Component not found
+
+Macro 12: New Node
+Add node LCD-8 to net Net408AS_1
+Error: Component not found
+
+Macro 13: New Node
+Add node LCD-7 to net Net408AS_2
+Error: Component not found
+
+Macro 14: New Node
+Add node LCD-5 to net Net408AS_4
+Error: Component not found
+
+Macro 15: New Node
+Add node LCD-9 to net NetLCD_9
+Error: Component not found
+
+Macro 16: New Node
+Add node LCD-10 to net NetLCD_10
+Error: Component not found
+
+Macro 17: New Node
+Add node BT-1 to net NetBT_1
+Error: Component not found
+
+Macro 18: New Node
+Add node DS18B20-2 to net NetBT_1
+Error: Component not found
+
+Macro 19: New Node
+Add node BT-3 to net NetBT_3
+Error: Component not found
+
+Macro 20: New Node
+Add node DS18B20-3 to net NetBT_3
+Error: Component not found
+
+Macro 21: New Node
+Add node CAP-2 to net NetBT_3
+Error: Component not found
+
+
+
+1 macro to be executed:
+-------------------------------------------------------------------------
+Macro 1: Add Component Class
+Add Component Class (Sheet1)
+
+

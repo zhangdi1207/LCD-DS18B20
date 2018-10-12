@@ -1,0 +1,19 @@
+Protel Synchronisation warnings report
+=========================================================================
+Date : 11-Jan-2018
+Time : 15:13:43
+
+Reference document: Sheet1.Sch
+Target document:    Sheet1.Pcb
+=========================================================================
+
+MISSING FOOTPRINTS
+=========================================================================
+DS18B20 NPN
+LCD 3-7SEG-LCD
+408AS STC15W408AS
+R1 RES1
+R2 RES1
+R3 RES1
+R4 RES1
+

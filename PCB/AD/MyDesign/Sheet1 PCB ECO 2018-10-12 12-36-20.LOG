@@ -1,0 +1,4 @@
+Added Component: Designator=BT(PCBComponent_1)
+Added Pin To Net: NetName=Net408AS_6 Pin=BT-1
+Added Pin To Net: NetName=Net408AS_8 Pin=BT-3
+Added Member To Class: ClassName=Sheet1 Member=Component BT HEADER 3
