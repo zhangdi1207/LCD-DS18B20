@@ -40,7 +40,7 @@ void calSEG(int n)
 		seg[2]|=(tens&0x30)>>2	|	(units&0x30)>>4;
 		seg[3]|=(tens&0xc0)>>4	|	(units&0xc0)>>6;
 	}
-	//*/取反操作，适用于P1.0接SEG1(接口5），P1.5接SEG6（接口10），如果反过来，那么位颠倒运算可以取消
+	/*/位取颠倒，取反操作，适用于P1.0接SEG1(接口5），P1.5接SEG6（接口10），如果反过来，那么位颠倒运算可以取消
 	for(i=0;i<4;i++)
 	{
 		old = seg[i];
@@ -54,6 +54,7 @@ void calSEG(int n)
 		}
 		seg[i]=new;
 	}
+	//*/
 }
 
 

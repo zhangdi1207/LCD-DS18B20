@@ -3,7 +3,19 @@
 <pre>
 <h1>礦ision3 Build Log</h1>
 <h2>Project:</h2>
-G:\git\SCM-LCD-DS18B20\LCD.uv2
-Project File Date:  02/12/2018
+E:\git\SCM-LCD-DS18B20-master\SCM-LCD-DS18B20-master\LCD.uv2
+Project File Date:  11/17/2018
 
 <h2>Output:</h2>
+创建目标 '目标 1'
+编译 18B20.C ...
+编译 delay.c ...
+编译 LCD.c ...
+LCD.C(12): 警告 C280: 'j': unreferenced local variable
+LCD.C(12): 警告 C280: 'old': unreferenced local variable
+LCD.C(12): 警告 C280: 'new': unreferenced local variable
+编译 main.c ...
+连接 ...
+Program Size: data=50.0 xdata=0 code=1159
+创建 HEX 文件 "LCD" ...
+"LCD" - 0 个错误, 3 个警告。

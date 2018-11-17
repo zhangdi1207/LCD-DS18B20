@@ -1,9 +1,9 @@
-C51 COMPILER V8.06   LCD                                                                   06/20/2018 09:52:56 PAGE 1   
+C51 COMPILER V8.06   LCD                                                                   11/17/2018 14:48:46 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE LCD
 OBJECT MODULE PLACED IN LCD.OBJ
-COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE LCD.c OPTIMIZE(9,SIZE) BROWSE DEBUG OBJECTEXTEND
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE LCD.c BROWSE DEBUG OBJECTEXTEND
 
 line level    source
 
@@ -50,95 +50,99 @@ line level    source
   40   2                      seg[2]|=(tens&0x30)>>2  |       (units&0x30)>>4;
   41   2                      seg[3]|=(tens&0xc0)>>4  |       (units&0xc0)>>6;
   42   2              }
-  43   1              //*/取反操作，适用于P1.0接SEG1(接口5），P1.5接SEG6（接口10），如果反过来，那么位颠倒运算可以取消
+  43   1              /*/位取颠倒，取反操作，适用于P1.0接SEG1(接口5），P1.5接SEG6（接口10），如果反过来，那么位颠倒运算可以取消
   44   1              for(i=0;i<4;i++)
   45   1              {
-  46   2                      old = seg[i];
-  47   2                      new=0;
-  48   2                      for(j=0;j<6;j++)
-  49   2                      {
-  50   3                              new<<=1;
-  51   3                              if((old&0x01)==0x01)
-  52   3                                      new |= 0x01;
-  53   3                              old >>=1;
-  54   3                      }
-C51 COMPILER V8.06   LCD                                                                   06/20/2018 09:52:56 PAGE 2   
+  46   1                      old = seg[i];
+  47   1                      new=0;
+  48   1                      for(j=0;j<6;j++)
+  49   1                      {
+  50   1                              new<<=1;
+  51   1                              if((old&0x01)==0x01)
+  52   1                                      new |= 0x01;
+  53   1                              old >>=1;
+  54   1                      }
+C51 COMPILER V8.06   LCD                                                                   11/17/2018 14:48:46 PAGE 2   
 
-  55   2                      seg[i]=new;
-  56   2              }
-  57   1      }
-  58          
+  55   1                      seg[i]=new;
+  56   1              }
+  57   1              //*/
+  58   1      }
+*** WARNING C280 IN LINE 12 OF LCD.C: 'j': unreferenced local variable
+*** WARNING C280 IN LINE 12 OF LCD.C: 'old': unreferenced local variable
+*** WARNING C280 IN LINE 12 OF LCD.C: 'new': unreferenced local variable
   59          
-  60          //*
-  61          void lcdShow(int n)
-  62          {
-  63   1              uchar i,j;
-  64   1              uchar highSet[4]={0x0e,0x0d,0x0b,0x07};
-  65   1              uchar lowSet[4]={0x01,0x02,0x04,0x08};
-  66   1              j=10;
-  67   1              calSEG(n);
-  68   1              while(j--)
-  69   1              {
-  70   2                      for(i=0;i<4;i++)
-  71   2                      {
-  72   3                              P3M1=0x0f;
-  73   3                              P3M0=0x00;
-  74   3                              P1=seg[i];
-  75   3                              P3M1=highSet[i];
-  76   3                              P3M0=lowSet[i];
-  77   3                              P3=~(0x01<<i);
-  78   3                              DelayNms(2);
-  79   3                              P3=~P3;
-  80   3                              P1=~P1;
-  81   3                              DelayNms(2);
-  82   3                      }       
-  83   2              }
-  84   1      
-  85   1              
-  86   1      }
-  87          //*/
-  88          /*
-  89          void lcdShow(int n)
-  90          {
-  91                  uchar i,j;
-  92                  uchar highSet[4]={0x0e,0x0d,0x0b,0x07};
-  93                  uchar lowSet[4]={0x01,0x02,0x04,0x08};
-  94                  j=10;
-  95                  seg[0]=0x04;
-  96                  seg[1]=0x0d;
-  97                  seg[2]=0x09;
-  98                  seg[3]=0x24;
-  99                  
- 100                  while(j--)
- 101                  {
- 102                          for(i=0;i<4;i++)
- 103                          {
- 104                                  P1=seg[i];
- 105                                  P3M1=highSet[i];
- 106                                  P3M0=lowSet[i];
- 107                                  P3=~(0x01<<i);
- 108                                  DelayNms(2);
- 109                                  P3=~P3;
- 110                                  P1=~P1;
- 111                                  DelayNms(2);
- 112                          }
- 113                  }
- 114          
- 115          }
- 116          //*/
-C51 COMPILER V8.06   LCD                                                                   06/20/2018 09:52:56 PAGE 3   
+  60          
+  61          //*
+  62          void lcdShow(int n)
+  63          {
+  64   1              uchar i,j;
+  65   1              uchar highSet[4]={0x0e,0x0d,0x0b,0x07};
+  66   1              uchar lowSet[4]={0x01,0x02,0x04,0x08};
+  67   1              j=10;
+  68   1              calSEG(n);
+  69   1              while(j--)
+  70   1              {
+  71   2                      for(i=0;i<4;i++)
+  72   2                      {
+  73   3                              P3M1=0x0f;
+  74   3                              P3M0=0x00;
+  75   3                              P1=seg[i];
+  76   3                              P3M1=highSet[i];
+  77   3                              P3M0=lowSet[i];
+  78   3                              P3=~(0x01<<i);
+  79   3                              DelayNms(2);
+  80   3                              P3=~P3;
+  81   3                              P1=~P1;
+  82   3                              DelayNms(2);
+  83   3                      }       
+  84   2              }
+  85   1      
+  86   1              
+  87   1      }
+  88          //*/
+  89          /*
+  90          void lcdShow(int n)
+  91          {
+  92                  uchar i,j;
+  93                  uchar highSet[4]={0x0e,0x0d,0x0b,0x07};
+  94                  uchar lowSet[4]={0x01,0x02,0x04,0x08};
+  95                  j=10;
+  96                  seg[0]=0x04;
+  97                  seg[1]=0x0d;
+  98                  seg[2]=0x09;
+  99                  seg[3]=0x24;
+ 100                  
+ 101                  while(j--)
+ 102                  {
+ 103                          for(i=0;i<4;i++)
+ 104                          {
+ 105                                  P1=seg[i];
+ 106                                  P3M1=highSet[i];
+ 107                                  P3M0=lowSet[i];
+ 108                                  P3=~(0x01<<i);
+ 109                                  DelayNms(2);
+ 110                                  P3=~P3;
+ 111                                  P1=~P1;
+ 112                                  DelayNms(2);
+ 113                          }
+C51 COMPILER V8.06   LCD                                                                   11/17/2018 14:48:46 PAGE 3   
 
+ 114                  }
+ 115          
+ 116          }
+ 117          //*/
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    363    ----
+   CODE SIZE        =    333    ----
    CONSTANT SIZE    =     18    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      4      27
+   DATA SIZE        =      4      29
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
 
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+C51 COMPILATION COMPLETE.  3 WARNING(S),  0 ERROR(S)

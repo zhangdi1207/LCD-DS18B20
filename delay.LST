@@ -1,9 +1,9 @@
-C51 COMPILER V8.06   DELAY                                                                 06/20/2018 09:52:56 PAGE 1   
+C51 COMPILER V8.06   DELAY                                                                 11/17/2018 14:48:46 PAGE 1   
 
 
 C51 COMPILER V8.06, COMPILATION OF MODULE DELAY
 OBJECT MODULE PLACED IN delay.OBJ
-COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE delay.c OPTIMIZE(9,SIZE) BROWSE DEBUG OBJECTEXTEND
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE delay.c BROWSE DEBUG OBJECTEXTEND
 
 line level    source
 
@@ -62,7 +62,7 @@ line level    source
   53                          while(n--);
   54                  }
   55                  else
-C51 COMPILER V8.06   DELAY                                                                 06/20/2018 09:52:56 PAGE 2   
+C51 COMPILER V8.06   DELAY                                                                 11/17/2018 14:48:46 PAGE 2   
 
   56                  {
   57                  n-=10;
